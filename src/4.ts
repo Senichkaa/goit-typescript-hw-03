@@ -38,7 +38,7 @@ abstract class House {
 }
 class MyHouse extends House {
   openDoor(key: Key): void {
-    if (key === this.key) {
+    if (key.getSignature() === this.key.getSignature()) {
       this.door = true;
     }
   }
